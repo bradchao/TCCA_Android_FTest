@@ -12,5 +12,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="F2 Page" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f00"
+        android:layout_marginVertical="10dp"
+        />
+    <TextView
+        android:id="@+id/f2tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        />
 
 </LinearLayout>

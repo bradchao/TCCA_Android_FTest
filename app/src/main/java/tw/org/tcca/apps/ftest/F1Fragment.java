@@ -19,15 +19,17 @@ public class F1Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mainView = inflater.inflate(R.layout.fragment_f1, container, false);
-        btn = mainView.findViewById(R.id.f1_btn);
-        tv = mainView.findViewById(R.id.lotto);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                createLotto();
-            }
-        });
+        if (mainView == null) {
+            mainView = inflater.inflate(R.layout.fragment_f1, container, false);
+            btn = mainView.findViewById(R.id.f1_btn);
+            tv = mainView.findViewById(R.id.lotto);
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    createLotto();
+                }
+            });
+        }
 
         return mainView;
     }

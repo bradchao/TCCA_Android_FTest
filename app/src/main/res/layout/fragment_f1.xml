@@ -12,5 +12,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="F1 Page" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000"
+        android:layout_marginVertical="10dp"
+        />
+    <Button
+        android:id="@+id/f1_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go"
+        />
+    <TextView
+        android:id="@+id/lotto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        />
 
 </LinearLayout>

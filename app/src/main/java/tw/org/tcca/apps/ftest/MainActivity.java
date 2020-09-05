@@ -50,5 +50,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void changeTV(String mesg){
         tv.setText(mesg);
+        f2.setTvmesg(mesg);
     }
 }

@@ -18,6 +18,7 @@ public class F2Fragment extends Fragment {
     private MainActivity activity;
     private View mainView;
     private TextView tv;
+    private String tvmesg = "";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -25,8 +26,13 @@ public class F2Fragment extends Fragment {
         Log.v("bradlog", "OK2");
         mainView = inflater.inflate(R.layout.fragment_f2, container, false);
         tv = mainView.findViewById(R.id.f2tv);
+        tv.setText(tvmesg);
 
         return mainView;
+    }
+
+    public void setTvmesg(String mesg){
+        tvmesg = mesg;
     }
 
     @Override

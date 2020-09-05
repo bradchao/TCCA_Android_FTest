@@ -1,7 +1,9 @@
 package tw.org.tcca.apps.ftest;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
@@ -15,6 +17,7 @@ public class F1Fragment extends Fragment {
     private Button btn;
     private TextView tv;
     private View mainView;
+    private MainActivity activity;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,6 +38,20 @@ public class F1Fragment extends Fragment {
     }
 
     private void createLotto(){
-        tv.setText("" + (int)(Math.random()*49+1));
+        String mesg = "" + (int)(Math.random()*49+1);
+        tv.setText(mesg);
+        activity.changeTV(mesg);
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        activity = (MainActivity)context;
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        Log.v("bradlog", "onDetach");
     }
 }

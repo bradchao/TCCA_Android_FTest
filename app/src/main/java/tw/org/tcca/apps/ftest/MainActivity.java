@@ -29,9 +29,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void gotoF1(View view) {
+        FragmentTransaction transaction = fmgr.beginTransaction();
+        transaction.replace(R.id.container, f1);
+        transaction.commit();
     }
     public void gotoF2(View view) {
+        FragmentTransaction transaction = fmgr.beginTransaction();
+        transaction.replace(R.id.container, f2);
+        transaction.commit();
     }
     public void gotoF3(View view) {
+        FragmentTransaction transaction = fmgr.beginTransaction();
+        transaction.replace(R.id.container, f3);
+        transaction.commit();
     }
 }
